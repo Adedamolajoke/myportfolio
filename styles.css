@@ -1,0 +1,672 @@
+:root {
+  --secondary-color: #fff050; /* Set your desired color value */
+  --rubiese: #64bbf7;
+  --apvertises: #489e85;
+}
+
+@font-face {
+  font-family: "Test Founders Grotesk";
+  src: url("assets/fonts/Test\ Founders\ Grotesk\ 400.otf") format("opentype");
+  /* Add other font formats if available */
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Test Founders Grotesk", sans-serif;
+}
+a,
+a {
+  text-decoration: none;
+  color: inherit;
+}
+a:visited {
+  color: rgb(225, 225, 225);
+}
+br {
+  margin: 1rem o;
+}
+p,
+a,
+ol,
+ul {
+  font-size: 18px;
+}
+.word-resp {
+  width: 50%;
+}
+/* 
+=====================================================
+              LANDING PAGE STYLES 
+=====================================================
+*/
+
+.stars-container {
+  position: fixed;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background: url("images/star.png") no-repeat;
+  animation: fadeInOut 5s infinite;
+}
+
+.stars-container:nth-child(1) {
+  top: 10%;
+  left: 20%;
+  animation-delay: 0s;
+}
+
+.stars-container:nth-child(2) {
+  top: 30%;
+  left: 50%;
+  animation-delay: 0.5s;
+}
+
+.stars-container:nth-child(3) {
+  top: 50%;
+  left: 80%;
+  animation-delay: 1s;
+}
+
+.stars-container:nth-child(4) {
+  top: 70%;
+  left: 10%;
+  animation-delay: 1.5s;
+}
+
+.stars-container:nth-child(5) {
+  top: 90%;
+  left: 40%;
+  animation-delay: 2s;
+}
+
+.stars-container:nth-child(6) {
+  top: 20%;
+  left: 70%;
+  animation-delay: 2.5s;
+}
+
+.stars-container:nth-child(7) {
+  top: 40%;
+  left: 90%;
+  animation-delay: 3s;
+}
+
+.stars-container:nth-child(8) {
+  top: 60%;
+  left: 30%;
+  animation-delay: 3.5s;
+}
+
+.stars-container:nth-child(9) {
+  top: 80%;
+  left: 60%;
+  animation-delay: 4s;
+}
+
+.stars-container:nth-child(10) {
+  top: 10%;
+  left: 90%;
+  animation-delay: 4.5s;
+}
+
+@keyframes fadeInOut {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+.body-style {
+  background-color: #0e1017;
+  color: #fff;
+  padding: 3rem 5rem;
+  /* font-family: "Founders Grotesk", sans-serif; */
+}
+p {
+  line-height: 1.5rem;
+}
+.ahref {
+  color: var(--secondary-color);
+  text-decoration: none;
+  font-size: 22px;
+}
+.nav {
+  display: flex;
+  text-decoration: none;
+  list-style: none;
+  justify-content: center;
+  gap: 2rem;
+  cursor: pointer;
+}
+
+.selected {
+  color: var(--secondary-color);
+}
+body.modal-open {
+  overflow: hidden;
+}
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding-top: 100px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  overflow-y: scroll;
+}
+
+.modal-content {
+  background-color: rgba(14, 16, 23, 1);
+  width: 45%;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+.modal-content h2 {
+  color: var(--secondary-color);
+  font-size: 32px;
+  width: 70%;
+  margin: 2rem auto;
+}
+
+/* Additional styling for the form */
+.modal-content form {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-content form label {
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.modal-content form input,
+.modal-content form textarea {
+  width: calc(100% - 20px);
+  padding: 18px;
+  margin-bottom: 1rem;
+  background-color: rgba(208, 213, 221, 0.05);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* Arrange first name and last name side by side */
+.modal-content form .form-group {
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal-content form .form-group input {
+  width: calc(48% - 5px);
+}
+
+.modal-content form textarea {
+  height: 120px; /* Increase the height of the textarea */
+  resize: vertical; /* Allow vertical resizing */
+}
+
+.modal-content form button {
+  background-color: var(--secondary-color);
+  padding: 1.4rem 1rem;
+  font-weight: bold;
+  font-size: 1rem;
+  border: none;
+  border-radius: 0.9rem;
+  cursor: pointer;
+  width: 98%;
+}
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem 0;
+}
+
+.header-button,
+.header-button-pre {
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  height: 2rem;
+  padding: 0 1rem;
+  border-radius: 0.5rem;
+  outline: none;
+  cursor: pointer;
+}
+
+.title {
+  max-width: 43.4rem;
+}
+.title-h {
+  font-size: 5rem;
+  margin: 1rem 0;
+}
+.title-p {
+  margin-bottom: 1rem;
+}
+.title-button {
+  background-color: var(--secondary-color);
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  margin: 2rem 0;
+}
+.case-study-h {
+  font-size: 4rem;
+  margin: 3rem 0;
+}
+.case-study-h::after {
+  content: "";
+  display: block;
+  margin: 1rem 0;
+  width: 9.3rem;
+  height: 1rem;
+  background-color: var(--secondary-color);
+}
+
+.case-studies {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+  gap: 1rem;
+}
+.case-studies:nth-child(odd) {
+  flex-direction: row-reverse;
+}
+.case-studies:nth-child(4) .case-studies-imgCont {
+  padding: 7% 13%;
+}
+.case-studies-text {
+  width: 32rem;
+}
+.case-studies-text-h {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+.case-studies .case-studies-text > a {
+  color: var(--secondary-color);
+}
+.case-studies-imgCont {
+  padding: 7% 15%;
+  background-color: rgba(44, 50, 69, 0.1);
+  display: flex;
+  justify-content: center;
+  border-radius: 1rem;
+}
+.case-studies-img {
+  object-fit: contain;
+}
+.user-interface {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  gap: 1rem;
+}
+.user-interface-img {
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+}
+.user-interface-img img {
+  width: 50%;
+}
+.footer {
+  display: flex;
+  text-decoration: none;
+  list-style: none;
+  justify-content: center;
+  gap: 2rem;
+  cursor: pointer;
+  margin: 4rem 0;
+}
+
+@media screen and (max-width: 1200px) {
+  .modal-content {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .word-resp {
+    width: 100%;
+  }
+  .body-style {
+    padding: 3rem 1rem;
+  }
+  .header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .header-button {
+    width: 80%;
+    margin: 1rem auto;
+  }
+
+  .header img {
+    width: 30%;
+    margin: 1rem auto;
+  }
+  .modal-content {
+    width: 100%;
+  }
+  .title {
+    width: 100%;
+  }
+  .title-h {
+    font-size: 3rem;
+    margin: 1rem 0;
+  }
+  .case-study-h {
+    font-size: 2.7rem;
+  }
+  .case-studies-text-h {
+    font-size: 2rem;
+  }
+  .case-studies {
+    display: flex;
+    flex-direction: column;
+  }
+  .case-studies:nth-child(3),
+  .case-studies:nth-child(5) {
+    flex-direction: column;
+  }
+  .case-studies-text {
+    width: 100%;
+  }
+  .user-interface-img {
+    width: 100%;
+    flex-direction: column;
+
+    gap: 1rem;
+  }
+  .user-interface-img img {
+    width: 100%;
+  }
+}
+
+/* 
+=====================================================
+              LANDING PAGE STYLES END
+=====================================================
+*/
+
+/* 
+=====================================================
+              ABOUT PAGE STYLES 
+=====================================================
+*/
+.about-h {
+  font-size: 50px;
+  margin: 2rem 0;
+  font-weight: 900;
+}
+.about-img {
+  margin: 0 0 2rem 0;
+  width: 100%;
+}
+.about-photo-h {
+  font-size: 2.2rem;
+  margin: 3rem 0;
+}
+.about-photo-h::after {
+  content: "";
+  display: block;
+  margin: 1rem 0;
+  width: 7.3rem;
+  height: 0.5rem;
+  background-color: var(--secondary-color);
+}
+.photo-walls {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1rem auto;
+}
+@media screen and (max-width: 1200px) {
+  .photo-walls img {
+    width: 50%;
+  }
+}
+/* 
+=====================================================
+                ABOUT PAGE STYLES END
+=====================================================
+*/
+
+/* 
+=====================================================
+              RUBIES CASE STUDY PAGE STYLES
+=====================================================
+*/
+
+.rubies-land {
+  margin: 2rem 0;
+}
+.rubies-h,
+.apvertise-h {
+  font-size: 3.5rem;
+  margin: 1rem 0;
+}
+.rubies-h span,
+.rubies-land p,
+.insights {
+  color: var(--rubiese);
+}
+
+.rubies-sub-h,
+.apvertise-sub-h {
+  font-size: 2rem;
+}
+.rubies-sub-h::after {
+  content: "";
+  display: block;
+  margin: 0.5rem 0;
+  width: 4.3rem;
+  height: 0.5rem;
+  background-color: var(--rubiese);
+}
+.rubies-overviews {
+  display: flex;
+  gap: 12rem;
+  /* flex-wrap: wrap; */
+}
+.rubies-overview-text p {
+  line-height: 2rem;
+}
+.rubies-overview-imgCont {
+  width: 100%;
+}
+.rubies-details {
+  display: flex;
+  justify-content: space-between;
+  margin: 4rem 0;
+  gap: 1rem;
+}
+.rubies-details .rubies-details-list {
+  width: 50%;
+}
+.rubies-details ul {
+  margin: 1.4rem;
+}
+.rubies-details ul li {
+  line-height: 1.5rem;
+}
+.rubies-tools {
+  width: 100%;
+  margin: 3rem 0;
+}
+.rubies-tools img {
+  margin: 1rem 0;
+}
+.rubies-empathize-link {
+  margin: 0 1.4rem;
+}
+.rubies-empathize-link > li {
+  margin: 0.3rem 0;
+}
+.ideation {
+  width: 90%;
+  margin: 5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.ideation img {
+  width: 100%;
+}
+
+@media screen and (max-width: 1200px) {
+  .rubies-h {
+    font-size: 2rem;
+  }
+  .rubies-overviews {
+    gap: 1rem;
+    /* flex-wrap: wrap; */
+  }
+  .rubies-overview-text p {
+    line-height: 1.5rem;
+  }
+  .ideation {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 720px) {
+  .rubies-overviews {
+    flex-direction: column;
+    gap: 1rem;
+    /* flex-wrap: wrap; */
+  }
+  .rubies-overview-img {
+    width: 100%;
+  }
+  .rubies-details {
+    display: block;
+  }
+  .rubies-details .rubies-details-list {
+    width: 100%;
+  }
+  .rubies-details .rubies-details-list p {
+    margin: 2rem 0.5rem;
+  }
+  .rubies-tools img {
+    width: 100%;
+  }
+}
+
+/* 
+=====================================================
+              RUBIES CASE STUDY PAGE STYLES END
+=====================================================
+*/
+
+/* 
+=====================================================
+              Apvertise CASE STUDY PAGE STYLES
+=====================================================
+*/
+.apvertise-sub-h::after {
+  content: "";
+  display: block;
+  margin: 0.5rem 0;
+  width: 4.3rem;
+  height: 0.5rem;
+  background-color: var(--apvertises);
+}
+.apvertise-land p,
+.apvertise-h span,
+.apverstise-col {
+  color: var(--apvertises);
+}
+.apvertise-overview-sec {
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+.rubies-problem {
+  display: flex;
+  gap: 5rem;
+}
+.rubies-problem-imgCont {
+  width: 100%;
+}
+.rubies-problem-img {
+  width: 100%;
+}
+.apverstise-col {
+  text-align: center;
+  margin: 1rem 0;
+}
+.image-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  gap: 1rem;
+}
+
+.apvertise-solution-image img {
+  width: 100%;
+  margin-top: 1rem;
+}
+.apvertise-solution-image p {
+  text-align: center;
+}
+ol {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+ol li {
+  line-height: 1.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .image-container {
+    grid-template-columns: auto;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .rubies-problem-img {
+    width: 100%;
+  }
+  .rubies-problem {
+    flex-direction: column;
+  }
+}
+
+.ubn-sub-h {
+  font-size: 3rem;
+  text-align: center;
+}
+.ubn-sub-h::after {
+  content: "";
+  display: block;
+  margin: 0.5rem auto;
+  width: 6.3rem;
+  height: 0.5rem;
+  background-color: var(--rubiese);
+}
