@@ -84,6 +84,7 @@ function outsideClick(e) {
     closeModal();
   }
 }
+
 // Problem: GIven a number 'n', find the first 'n' elements of the Fibonacci sequence
 
 const Fibonacci = (n) => {
