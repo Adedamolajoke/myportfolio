@@ -304,7 +304,7 @@ body.modal-open {
 .case-studies {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 3rem;
+  margin-bottom: 10rem;
   gap: 1rem;
 }
 .case-studies:nth-child(odd) {
@@ -350,6 +350,9 @@ body.modal-open {
 }
 .user-interface-img img {
   width: 50%;
+}
+.img-usr-1 {
+  width: 39%;
 }
 .footer {
   display: flex;
@@ -561,7 +564,8 @@ body.modal-open {
 }
 
 @media screen and (max-width: 1200px) {
-  .rubies-h {
+  .rubies-h,
+  .mymed-h {
     font-size: 2rem;
   }
   .rubies-overviews {
