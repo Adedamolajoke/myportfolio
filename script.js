@@ -65,7 +65,7 @@ function sendMessage() {
     From: "adedamolaj6@gmail.com",
     Subject: "Someone is trying to reach out to you",
     Body: bodyMessage,
-  }).then((message) => alert(message));
+  }).then((message) => alert("Email Sent Successfully to Adedamola"));
 }
 form.addEventListener("submit", (e) => {
   e.preventDefault();
